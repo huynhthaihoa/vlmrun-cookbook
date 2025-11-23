@@ -50,3 +50,34 @@ Our collection of Colab notebooks demonstrates various use cases and integration
 * 💬 Send us an email at [support@vlm.run](mailto:support@vlm.run) or join our [Discord](https://discord.gg/4jgyECY4rq) for help
 * 📣 Follow us on [Twitter](https://twitter.com/vlmrun) and [LinkedIn](https://www.linkedin.com/company/vlm-run) to keep up-to-date on our products
 * 📚 Check out our [Documentation](https://docs.vlm.run/) for detailed guides and API reference
+
+### Launching
+
+- Install the uv package manager if you haven't already:
+
+```bash
+uv python install
+```
+- Initialize the venv:
+
+```bash
+uv init
+```
+
+- To create a kernel, you'll need to install ipykernel as a development dependency:
+
+```bash
+uv add --dev ipykernel
+```
+
+- To add the kernel to Jupyter, run:
+
+```bash
+uv run ipython kernel install --user --env VIRTUAL_ENV $(pwd)/.venv --name=vlmrun-cookbook
+```
+
+- Execute the uv command:
+
+```bash
+uv run --with jupyter jupyter lab
+```
